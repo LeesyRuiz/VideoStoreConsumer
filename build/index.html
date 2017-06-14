@@ -11,17 +11,17 @@
 
     <header>
       <h1>Video Store</h1>
-      <input type="text" name="title" />
-      <button type="button" onclick="search()" class="button">Search</button>
+      <input type="text" id="movie-title" placeholder="Search by Movie Title"/>
+      <button type="button" id="search" class="button">Search</button>
     </header>
     <main>
-
+      <section id="movie-list" ></section>
     </main>
 
     <!-- TEMPLATE -->
 
     <script id="movie-title-list-template" type="text/template">
-      <li><%- name -></li>
+      <li><%- title -></li>
     </script>
 
     <script src="/app.bundle.js"></script>

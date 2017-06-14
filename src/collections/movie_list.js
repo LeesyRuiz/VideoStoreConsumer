@@ -4,7 +4,12 @@ import Movie from '../models/movie';
 
 var MovieList = Backbone.Collection.extend({
   model: Movie,
-  url: 'http://localhost:3000/movies?query=' + $('input[name=title]')
+  initialize: function(options) {
+    this.query = options.query;
+  },
+  url: function() {
+    return "http://localhost:3000/movies?query="+this.query;
+  }
 });
 
 export default MovieList;
