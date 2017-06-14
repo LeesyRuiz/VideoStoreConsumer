@@ -5,9 +5,24 @@
     <link rel="stylesheet" type="text/css" href="css/_settings.css">
     <link rel="stylesheet" type="text/css" href="css/foundation.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Backbone Baseline</title>
+    <title>K&L VideoStore</title>
   </head>
   <body>
+
+    <header>
+      <h1>Video Store</h1>
+      <input type="text" name="title" />
+      <button type="button" onclick="search()" class="button">Search</button>
+    </header>
+    <main>
+
+    </main>
+
+    <!-- TEMPLATE -->
+
+    <script id="movie-title-list-template" type="text/template">
+      <li><%- name -></li>
+    </script>
 
     <script src="/app.bundle.js"></script>
 
