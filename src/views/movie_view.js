@@ -1,10 +1,9 @@
 import Backbone from 'backbone';
-import $ from 'jquery';
-import _ from 'underscore';
 
 var MovieView = Backbone.View.extend({
   initialize: function(title) {
-    this.template = title.movieTemplate;
+    this.template = title.template;
+    this.listenTo(this.model, "change", this.render);
   },
   render: function() {
     var compiledTemplate = this.template(this.model.toJSON());
