@@ -21,19 +21,6 @@ var movieDatabaseResults = function(event) {
   });
 };
 
-// var movieList = new MovieList({query: $('#movie-title').val()});
-// // $('#movie-title').val()
-// movieList.fetch();
-//
-// var movieListParams = {
-//   el: $('main'),
-//   model: movieList
-// };
-//
-// var myMovieListView = new MovieListView(movieListParams);
-
-
-
 // ready to go
 $(document).ready(function() {
   $('#search').click(movieDatabaseResults);
