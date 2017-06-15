@@ -33,7 +33,7 @@ var rentalDatabaseResults = function(event) {
 
   var displayResults = new RentalListView({
     model: myRentalList,
-    template: _.template($('#movie-title-list-template').html()),
+    template: _.template($('#rental-title-list-template').html()),
     el: $('main')
   });
 };
