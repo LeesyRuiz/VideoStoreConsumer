@@ -14,27 +14,22 @@
 
       <input type="text" id="movie-title" placeholder="Search by Movie Title"/>
       <button type="button" id="search" class="button">Search</button>
-
       <button type="button" id="library" class="button">Rental Library</button>
-
-
-
-
     </header>
-
-
-
 
     <main>
       <section id="movie-list" ></section>
-      <!-- <section id="rental-library" ></section> -->
-
     </main>
 
     <!-- TEMPLATE -->
 
     <script id="movie-title-list-template" type="text/template">
-        <li><%- title %></li>
+      <div class="row">
+        <p class="medium-3 columns"><%- title %></p>
+        <div class="medium-9 columns">
+          <button type="button" id="add-to-library-button" class="button">Add to Library</button>
+        </div>
+      </div>
     </script>
 
     <script id="rental-title-list-template" type="text/template">
