@@ -44,4 +44,5 @@ var rentalDatabaseResults = function(event) {
 $(document).ready(function() {
   $('#search').click(movieDatabaseResults);
   $('#library').click(rentalDatabaseResults);
+
 });
