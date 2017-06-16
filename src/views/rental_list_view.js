@@ -19,15 +19,21 @@ var RentalListView = Backbone.View.extend({
         template: self.template,
       });
       self.$('#movie-list').append(movieView.render().el);
-      self.listenTo(movieView, "movieAdded", function(movie){
-        console.log(movie);
-        self.model.create(movie)
-        self.model.fetch();
-      });
-
+      // self.listenTo(movieView, "movieAdded", function(movie){
+      //   console.log(movie);
+      //   self.model.create(movie)
+      //   self.model.fetch();
     });
-    return this;
-  }
+
+    newMovie: function(movieData) {
+      var movie = new movie(movieData);
+      movie.save();
+      this.collection.add(movie);
+    }
+
+  });
+  return this;
+}
 });
 
 export default RentalListView;

@@ -20,7 +20,7 @@ var MovieView = Backbone.View.extend({
     event.stopPropagation();
     console.log(this.model.attributes);
     this.trigger("movieAdded", this.model.attributes)
-    this.RentalListView.push(movieView);
+    // this.RentalListView.push(movieView);
 
   }
 

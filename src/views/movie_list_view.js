@@ -27,6 +27,10 @@ var MovieListView = Backbone.View.extend({
     return this;
   }
 
+  events: {
+    
+  }
+
 });
 
 export default MovieListView;
