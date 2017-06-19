@@ -1,4 +1,5 @@
 import Backbone from 'backbone';
+import $ from 'jquery';
 
 var MovieView = Backbone.View.extend({
   initialize: function(title) {
@@ -11,6 +12,7 @@ var MovieView = Backbone.View.extend({
     this.$el.html(compiledTemplate);
     return this;
   },
+<<<<<<< HEAD
 
   events: {
     "click h3.button.add-inventory": "addMovie"
@@ -22,6 +24,24 @@ var MovieView = Backbone.View.extend({
     this.trigger("movieAdded", this.model.attributes)
     // this.RentalListView.push(movieView);
 
+=======
+  events: {
+    "click #add-button": "addMovie"
+  },
+  addMovie: function(movie) {
+    $.ajax({
+      method: "POST",
+      url: "http://localhost:3000/movies",
+      data: {movie: this.model.attributes}, //needed the brackets and movie:
+      success: function(input) {
+        alert("Movie added");
+        console.log("DID WE ADD A MOVIE??");
+      },
+      error: function() {
+        alert("error");
+      }
+    });
+>>>>>>> master
   }
 
 

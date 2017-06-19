@@ -16,30 +16,26 @@
       <button type="button" id="search" class="button">Search</button>
 
       <button type="button" id="library" class="button">Rental Library</button>
-
-
-
-
     </header>
-
-
-
 
     <main>
       <section id="movie-list" ></section>
-      <!-- <section id="rental-library" ></section> -->
-
     </main>
 
     <!-- TEMPLATE -->
 
     <script id="movie-title-list-template" type="text/template">
         <li><%- title %></li>
-        <h3 class="button add-inventory"> Add to Inventory</h3>
+        <img src=<%- image_url %>>
+        <button type="button" id="add-button" class="button">Add to Rental Library</button>
     </script>
 
     <script id="rental-title-list-template" type="text/template">
-      <li><%- title %></li>
+      <li>
+        <strong><%- title %></strong>
+        Inventory: <%- inventory %>
+
+      </li>
     </script>
 
     <script src="/app.bundle.js"></script>
