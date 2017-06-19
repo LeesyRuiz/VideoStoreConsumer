@@ -18,7 +18,7 @@ var MovieView = Backbone.View.extend({
     $.ajax({
       method: "POST",
       url: "http://localhost:3000/movies",
-      data: {movie: this.model.attributes},
+      data: {movie: this.model.attributes}, //needed the brackets and movie:
       success: function(input) {
         alert("Movie added");
         console.log("DID WE ADD A MOVIE??");
