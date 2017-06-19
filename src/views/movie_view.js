@@ -12,7 +12,8 @@ var MovieView = Backbone.View.extend({
     return this;
   },
   events: {
-    "click #add-button": "addMovie"
+    "click #add-button": "addMovie",
+    "click #inventory-button": "addInventory"
   },
   addMovie: function(movie) {
     $.ajax({
@@ -25,6 +26,21 @@ var MovieView = Backbone.View.extend({
       },
       error: function() {
         alert("error");
+      }
+    });
+  },
+  addInventory: function() {
+    $.ajax({
+      method: "PUT",
+      url: "http://localhost:3000/movies/"+2,
+      data: {movie: this.model.attributes},
+      success: function() {
+        alert("Copy of movie added to inventory");
+        console.log($(this).attr('data-movieID'));
+      },
+      error: function() {
+        alert("error");
+        console.log($(this).attr('data-movieID'));
       }
     });
   }
