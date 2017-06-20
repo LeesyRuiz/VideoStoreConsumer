@@ -42,6 +42,16 @@ var rentalDatabaseResults = function(event) {
 
 // ready to go
 $(document).ready(function() {
+
+  var myRentalList = new RentalList();
+  myRentalList.fetch();
+
+  var displayResults = new RentalListView({
+    model: myRentalList,
+    template: _.template($('#rental-title-list-template').html()),
+    el: $('main')
+  });
+
   $('#search').click(movieDatabaseResults);
   $('#library').click(rentalDatabaseResults);
 });
