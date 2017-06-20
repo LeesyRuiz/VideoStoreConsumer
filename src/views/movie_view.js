@@ -1,5 +1,6 @@
 import Backbone from 'backbone';
 import $ from 'jquery';
+import _ from 'underscore';
 
 var MovieView = Backbone.View.extend({
   initialize: function(title) {
@@ -30,17 +31,19 @@ var MovieView = Backbone.View.extend({
     });
   },
   addInventory: function() {
+    console.log(this);
+
+    var id = this.model.id;
+    console.log(id);
     $.ajax({
       method: "PUT",
-      url: "http://localhost:3000/movies/"+2,
+      url: "http://localhost:3000/movies/"+id,
       data: {movie: this.model.attributes},
       success: function() {
         alert("Copy of movie added to inventory");
-        console.log($(this).attr('data-movieID'));
       },
       error: function() {
         alert("error");
-        console.log($(this).attr('data-movieID'));
       }
     });
   }
