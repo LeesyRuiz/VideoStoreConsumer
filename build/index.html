@@ -13,7 +13,8 @@
       <h1>Video Store</h1>
 
       <input type="text" id="movie-title" placeholder="Search by Movie Title"/>
-      <button type="button" id="search" class="button">Search</button>
+      <button type="button" id="search-database" class="button">Search Database</button>
+      <button type="button" id="search-library" class="button">Search Library</button>
       <button type="button" id="library" class="button">Rental Library</button>
     </header>
 
@@ -23,9 +24,16 @@
 
     <!-- TEMPLATE -->
 
+
+
+
+
+
     <script id="movie-title-list-template" type="text/template">
         <li><%- title %></li>
+
         <img src=<%- image_url %>>
+
         <button type="button" id="add-button" class="button">Add to Rental Library</button>
     </script>
 
@@ -34,7 +42,11 @@
         <strong><%- title %></strong>
         Inventory: <%- inventory %>
         <img src=<%- image_url %>>
+<<<<<<< HEAD
         <button type="button" id="inventory-button" class="button" data-movieID=<%- id %>>Increase Inventory</button>
+=======
+
+>>>>>>> 3fb27768cb0e1507bef4a4a544c89d32d1deca0b
       </li>
     </script>
 
