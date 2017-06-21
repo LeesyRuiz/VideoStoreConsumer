@@ -30,8 +30,8 @@ var movieDatabaseResults = function(event) {
 var rentalSearchDatabaseResults = function(event) {
   console.log("helloooooo?");
   var search = $('#movie-title').val().toLowerCase().replace(/\b[a-z]/g, function(letter) {
-return letter.toUpperCase();
-});
+    return letter.toUpperCase();
+  });
   console.log(search);
   var rentalSearchList = new RentalSearchList({query: search});
   rentalSearchList.fetch();
