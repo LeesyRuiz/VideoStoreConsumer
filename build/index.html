@@ -20,32 +20,23 @@
 
     <main>
       <section id="movie-list" ></section>
+      <ul id="list" class="row"></ul>
     </main>
 
-    <!-- TEMPLATE -->
+    <!-- TEMPLATES -->
     <script id="movie-title-list-template" type="text/template">
-      <li><%- title %></li>
-      <!-- Trigger Modal -->
-      <button id="myBtn" class="button"><img src=<%- image_url %>></button>
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>
-            Some text in the Modal..
-          </p>
-        </div>
-      </div>
-
-      <button type="button" id="add-button" class="button">Add to Rental Library</button>
+      <li id="list-item" class="medium-4 large-3 columns align-center">
+        <strong><%- title %></strong></br>
+        <img src=<%- image_url %>></br>
+        <button type="button" id="add-button" class="button">Add to Rental Library</button>
+      </li>
     </script>
 
     <script id="rental-title-list-template" type="text/template">
-      <li>
-        <strong><%- title %></strong>
-        Inventory: <%- inventory %>
-        <img src=<%- image_url %>>
+      <li class="medium-4 large-3 columns align-center">
+        <strong><%- title %></strong></br>
+        <img src=<%- image_url %>></br>
+        Inventory: <%- inventory %></br>
         <button type="button" id="inventory-button" class="button">Increase Inventory</button>
       </li>
     </script>
