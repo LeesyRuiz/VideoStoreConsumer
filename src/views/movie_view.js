@@ -38,14 +38,9 @@ var MovieView = Backbone.View.extend({
     $.ajax({
       method: "PUT",
       url: "http://localhost:3000/movies/"+id,
-      data: {movie: this.model.attributes},
-      success: function() {
-        alert("Copy of movie added to inventory");
-      },
-      error: function() {
-        alert("error");
-      }
+      data: {movie: this.model.attributes}
     });
+    window.location.reload();
   }
 });
 

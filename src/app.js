@@ -74,5 +74,4 @@ $(document).ready(function() {
   $('#search-database').click(movieDatabaseResults);
   $('#search-library').click(rentalSearchDatabaseResults);
   $('#library').click(rentalDatabaseResults);
-
 });
